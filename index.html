@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional paralegal, G2C, and private investigation services in Mumbai. Expert guidance on legal documentation, property registration, passport services, and government procedures. Pan-India service delivery. Free consultation available.">
+    <meta name="keywords" content="paralegal services, G2C services, legal documentation, property registration, passport services, investigation services, Mumbai, India">
+    <meta name="author" content="ZSAR's Paralegal & G2C">
+    <meta name="theme-color" content="#1e40af">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="ZSAR's Paralegal & G2C Services - Expert Legal Documentation & Government Services">
+    <meta property="og:description" content="Professional paralegal, G2C, and investigation services. Expert guidance on legal matters, property, and government procedures. Free consultation.">
+    <meta property="og:type" content="website">
+    
+    <title>ZSAR's Paralegal & G2C - Professional Legal Documentation & G2C Services</title>
+    <link rel="canonical" href="https://zsarparalegal.com/">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <h2>ZSAR's Paralegal & G2C</h2>
+                <p class="tagline">Clarity. Confidentiality. Compliance.</p>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Floating Consultation Button -->
+    <button class="floating-cta" id="consultationBtn" aria-label="Open consultation form">
+        <span>?</span>
+        <span class="pulse"></span>
+    </button>
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-header">
+                <h3>Free Consultation</h3>
+                <p>⭐ First 50 Monthly ⭐</p>
+            </div>
+            <form id="consultationForm" class="consultation-form">
+                <div class="form-group">
+                    <label for="name">Your Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                </div>
+                <div class="form-group">
+                    <label for="requirement">What do you need help with? *</label>
+                    <textarea id="requirement" name="requirement" required placeholder="Describe your legal or G2C requirement..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Request Free Consultation</button>
+                <p class="form-note">We'll respond within 2 hours on business days</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Paralegal & G2C Expertise, Agent-Free</h1>
+                <p class="hero-subtitle">Empowering Civilians. Simplifying Legal & Public Services.</p>
+                <p class="hero-description">
+                    Practical G2C and legal know-how for everyday people, non-court support, and transparent guidance — no middlemen ever. 
+                    For anything complex or urgent, connect instantly below.
+                </p>
+                <div class="hero-ctas">
+                    <button class="btn-primary" onclick="document.getElementById('consultationModal').style.display='flex'">
+                        💬 Chat on WhatsApp
+                    </button>
+                    <button class="btn-secondary" onclick="document.getElementById('consultationModal').style.display='flex'">
+                        📞 Book Consultation
+                    </button>
+                </div>
+                <div class="hero-info">
+                    <p><strong>Sarfaraz Qureshi</strong> | 6+ Years Experience | Pan-India Service</p>
+                    <p>📧 zsarfreelance@gmail.com | ☎️ +91 8108470961</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services & Expertise</h2>
+            <p class="section-intro">Expert guidance tailored to your unique legal and administrative needs. Every situation is different—we work with you to find the right solution.</p>
+            
+            <div class="services-grid">
+                <!-- Legal & Paralegal Support -->
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Legal & Paralegal Support</h3>
+                    <ul class="service-list">
+                        <li>Legal Drafting & Documentation</li>
+                        <li>Contract Review & Analysis</li>
+                        <li>Legal Research & Case Briefing</li>
+                        <li>Compliance Assistance</li>
+                        <li>Notary & Attestation Support</li>
+                    </ul>
+                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                </div>
+
+                <!-- Property & Registration -->
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Property & Registration</h3>
+                    <ul class="service-list">
+                        <li>Title Verification & Due Diligence</li>
+                        <li>Sale Deed & Gift Deed Drafting</li>
+                        <li>7/12, 8A Extracts & Verification</li>
+                        <li>Stamp Duty & Online Registration</li>
+                        <li>Mutation & Property Correction</li>
+                    </ul>
+                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                </div>
+
+                <!-- Investigation & Tracing -->
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Investigation & Tracing</h3>
+                    <ul class="service-list">
+                        <li>Background Checks & Due Diligence</li>
+                        <li>Asset Tracing & Verification</li>
+                        <li>Fraud & Cybercrime Investigation</li>
+                        <li>Evidence Gathering for Legal Use</li>
+                        <li>Missing Persons & Identity Cases</li>
+                    </ul>
+                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                </div>
+
+                <!-- G2C Services -->
+                <div class="service-card">
+                    <div class="service-icon">🛂</div>
+                    <h3>G2C Services</h3>
+                    <ul class="service-list">
+                        <li>Passport Application & Renewal</li>
+                        <li>GST Registration & Compliance</li>
+                        <li>Udyam/MSME Registration</li>
+                        <li>Gazette Publications</li>
+                        <li>Government Portal Assistance</li>
+                    </ul>
+                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                </div>
+
+                <!-- Family & Personal -->
+                <div class="service-card">
+                    <div class="service-icon">👨‍👩‍👧</div>
+                    <h3>Family & Personal</h3>
+                    <ul class="service-list">
+                        <li>Marriage Registration (All Acts)</li>
+                        <li>Joint Affidavits & Declarations</li>
+                        <li>Succession & Settlement Documents</li>
+                        <li>Name Change & Gazette Services</li>
+                        <li>Notary Services</li>
+                    </ul>
+                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                </div>
+
+                <!-- Court & Legal Filing -->
+                <div class="service-card">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Court & Legal Support</h3>
+                    <ul class="service-list">
+                        <li>Court Filing Guidance</li>
+                        <li>Process Serving Assistance</li>
+                        <li>Case Documentation Support</li>
+                        <li>Legal Research & Briefing</li>
+                        <li>Client Interview & Intake</li>
+                    </ul>
+                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About ZSAR's Paralegal & G2C</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Since 2019: Making Legal & Government Services Agent-Free</h3>
+                    <p>
+                        We believe knowledge empowers. For over 6 years, we've been helping citizens and businesses across India navigate legal and administrative processes with clarity and confidence.
+                    </p>
+                    <p>
+                        Our approach is simple: provide clear guidance, practical tools, and step-by-step instructions so you can handle your own procedures when possible. When you need professional help, we offer that too—with complete transparency and no hidden fees.
+                    </p>
+                    <h3 style="margin-top: 30px;">Our Team</h3>
+                    <ul class="team-list">
+                        <li><strong>Sarfaraz Qureshi</strong> - Proprietor & Lead Paralegal (6+ years experience)</li>
+                        <li><strong>Advocate Team</strong> - Legal Experts (15+ years litigation & advisory)</li>
+                        <li><strong>Notary Support</strong> - Attestation & Document Verification</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Documents Drafted</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">Pan-India</div>
+                        <div class="stat-label">Service Delivery</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">24-48hrs</div>
+                        <div class="stat-label">Typical Turnaround</div>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>⚠️ Legal Disclaimer</h4>
+                        <p>ZSAR's Paralegal & G2C provides professional paralegal documentation and G2C assistance only. We are NOT licensed advocates under the Advocates Act, 1961. We do not provide legal advice, court representation, or hold ourselves out as lawyers. For legal advice or court appearances, please consult a qualified advocate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="section-intro">Have questions? Need immediate help? We're here for you.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Office Location</h3>
+                        <p>Amarbandhan Hall, Ground Floor<br>Opp. MSEB Building, A.K. Marg<br>Bandra East, Mumbai – 400051</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:+918108470961">+91 8108470961</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>General: <a href="mailto:zsarfreelance@gmail.com">zsarfreelance@gmail.com</a></p>
+                        <p>Marriage Services: <a href="mailto:amarnathmishra151@gmail.com">amarnathmishra151@gmail.com</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>⏰ Business Hours</h3>
+                        <p>Monday – Saturday: 10:00 AM – 6:00 PM<br>Sunday: Closed<br>Response Time: Within 2 hours</p>
+                    </div>
+
+                    <div class="contact-item whatsapp-highlight">
+                        <h3>💬 Quick Connect</h3>
+                        <p>Prefer WhatsApp? Click to start instant chat:</p>
+                        <a href="https://wa.me/918108470961?text=Hi%20Sarfaraz%20I%20need%20help%20with" class="btn-primary" style="display: inline-block; margin-top: 10px;">Open WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="name" required placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone *</label>
+                            <input type="tel" id="contactPhone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" required placeholder="Tell us what you need..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                        <p class="form-note">We'll get back to you within 2 hours</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ZSAR's Paralegal & G2C</h4>
+                    <p>Professional paralegal, G2C, and investigation services for individuals and businesses across India.</p>
+                    <p class="footer-disclaimer">
+                        © 2025 ZSAR's Paralegal & G2C. Professional paralegal documentation services. Not a law firm. Not licensed advocates. Services provided under Indian law.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 zsarfreelance@gmail.com</p>
+                    <p>📞 +91 8108470961</p>
+                    <p>📍 Bandra East, Mumbai</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Use</a></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Last Updated: November 2025 | Optimized for Indian Legal Standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

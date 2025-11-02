@@ -43,7 +43,7 @@ window.addEventListener('click', (event) => {
         consultationModal.style.display = 'none';
     }
 });
-
+/*
 // ============================================
 // 3. CONSULTATION FORM HANDLING
 // ============================================
@@ -154,7 +154,7 @@ if (contactForm) {
         }
     });
 }
-
+*/
 // ============================================
 // 5. NOTIFICATION SYSTEM
 // ============================================

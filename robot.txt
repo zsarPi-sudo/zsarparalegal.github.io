@@ -1,4 +1,6 @@
+# Allow all bots to crawl the whole site
 User-agent: *
 Allow: /
 
+# Tell crawlers where the sitemap lives (match your exact property URL)
 Sitemap: https://zsarpi-sudo.github.io/zsarparalegal.github.io/sitemap.xml

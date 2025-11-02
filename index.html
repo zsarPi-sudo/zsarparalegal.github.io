@@ -280,26 +280,16 @@
 
                 <div class="contact-form-wrapper">
                     <h3>Send us a Message</h3>
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="contactName">Your Name *</label>
-                            <input type="text" id="contactName" name="name" required placeholder="Full Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="contactEmail">Email *</label>
-                            <input type="email" id="contactEmail" name="email" required placeholder="your@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="contactPhone">Phone *</label>
-                            <input type="tel" id="contactPhone" name="phone" required placeholder="+91 XXXXX XXXXX">
-                        </div>
-                        <div class="form-group">
-                            <label for="contactMessage">Message *</label>
-                            <textarea id="contactMessage" name="message" required placeholder="Tell us what you need..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                        <p class="form-note">We'll get back to you within 2 hours</p>
-                    </form>
+                    <form id="contactForm"
+      action="https://script.google.com/macros/s/AKfycbx8WwQ17EEvw6UrZ5s718nUU_dZo5dpQAjFnD1GA_2ZHU0r3MBVLHhqVdbfaZPVQ6bl/exec"
+      method="POST" class="contact-form">
+  <input type="text"   name="name"    placeholder="Full Name" required />
+  <input type="email"  name="email"   placeholder="your@email.com" required />
+  <input type="tel"    name="phone"   placeholder="+91 XXXXX XXXXX" required />
+  <textarea            name="message" placeholder="Tell us what you need..." required></textarea>
+  <!-- Map 'message' to 'requirement' on backend (optional: change name to requirement to match script) -->
+  <button type="submit" class="btn-primary">Send Message</button>
+</form>
                 </div>
             </div>
         </div>

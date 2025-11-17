@@ -13,9 +13,163 @@
     <meta property="og:description" content="Professional paralegal, G2C, and investigation services. Expert guidance on legal matters, property, and government procedures. Free consultation.">
     <meta property="og:type" content="website">
     
+    <!-- Canonical: Points to your current live GitHub Pages URL until you switch to custom domain -->
+    <link rel="canonical" href="https://zsarpi-sudo.github.io/zsarparalegal.github.io/">
+    
     <title>ZSAR's Paralegal & G2C - Professional Legal Documentation & G2C Services</title>
-    <link rel="canonical" href="https://zsarparalegal.com/">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- ===== JSON-LD STRUCTURED DATA (Invisible to users, visible to search engines) ===== -->
+    
+    <!-- LocalBusiness: Tells Google who you are -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ZSAR's Paralegal & G2C",
+      "image": "https://zsarpi-sudo.github.io/zsarparalegal.github.io/",
+      "description": "Professional paralegal, G2C, and investigation services for individuals and businesses across India.",
+      "telephone": "+918108470961",
+      "email": "zsarfreelance@gmail.com",
+      "url": "https://zsarpi-sudo.github.io/zsarparalegal.github.io/",
+      "areaServed": "IN",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Amarbandhan Hall, Ground Floor, Opp. MSEB Building, A.K. Marg",
+        "addressLocality": "Bandra East",
+        "addressRegion": "Mumbai",
+        "postalCode": "400051",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://wa.me/918108470961"
+      ]
+    }
+    </script>
+
+    <!-- Service 1: Legal & Paralegal Support -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Legal & Paralegal Support",
+      "description": "Legal drafting and documentation, contract review, legal research, compliance assistance, and notary support.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ZSAR's Paralegal & G2C"
+      },
+      "areaServed": "IN"
+    }
+    </script>
+
+    <!-- Service 2: Property & Registration -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Property & Registration",
+      "description": "Title verification, deed drafting, property extracts, and registration guidance.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ZSAR's Paralegal & G2C"
+      },
+      "areaServed": "IN"
+    }
+    </script>
+
+    <!-- Service 3: Investigation & Tracing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Investigation & Tracing",
+      "description": "Background checks, asset tracing, fraud investigation, and evidence gathering.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ZSAR's Paralegal & G2C"
+      },
+      "areaServed": "IN"
+    }
+    </script>
+
+    <!-- Service 4: G2C Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Government-to-Citizen Services",
+      "description": "Passport applications, GST registration, Udyam registration, and government portal assistance.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ZSAR's Paralegal & G2C"
+      },
+      "areaServed": "IN"
+    }
+    </script>
+
+    <!-- Service 5: Family & Personal -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Family & Personal Documentation",
+      "description": "Marriage registration, affidavits, succession documents, and name change gazette services.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ZSAR's Paralegal & G2C"
+      },
+      "areaServed": "IN"
+    }
+    </script>
+
+    <!-- Service 6: Court & Legal Support -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Court & Legal Support",
+      "description": "Court filing guidance, process serving, case documentation, and legal research.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ZSAR's Paralegal & G2C"
+      },
+      "areaServed": "IN"
+    }
+    </script>
+
+    <!-- FAQPage: Visible Q&A + Machine-Readable -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you provide court representation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. ZSAR provides paralegal documentation and G2C assistance only. Court representation requires a licensed advocate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can you deliver documents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simple documents typically in 24–48 hours, with timelines confirmed during consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work pan-India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Consultations and document delivery are available pan-India via email, WhatsApp, and courier."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -45,30 +199,31 @@
         <span class="pulse"></span>
     </button>
 
-    <!-- Consultation Modal -->
+    <!-- Consultation Modal (Hidden by default, triggered by floating button) -->
     <div class="modal" id="consultationModal">
         <div class="modal-content">
             <button class="modal-close" id="closeModal">&times;</button>
             <div class="modal-header">
-                <h3>Free Consultation</h3>
+                <h3>Free Consultation Request</h3>
                 <p>⭐ First 50 Monthly ⭐</p>
             </div>
+            <!-- Consultation Form: Posts to your Gmail API endpoint -->
             <form id="consultationForm" class="consultation-form">
                 <div class="form-group">
-                    <label for="name">Your Full Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    <label for="consName">Your Full Name *</label>
+                    <input type="text" id="consName" name="name" required placeholder="Enter your name">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    <label for="consEmail">Email Address *</label>
+                    <input type="email" id="consEmail" name="email" required placeholder="your@email.com">
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                    <label for="consPhone">Phone Number *</label>
+                    <input type="tel" id="consPhone" name="phone" required placeholder="+91 XXXXX XXXXX">
                 </div>
                 <div class="form-group">
-                    <label for="requirement">What do you need help with? *</label>
-                    <textarea id="requirement" name="requirement" required placeholder="Describe your legal or G2C requirement..."></textarea>
+                    <label for="consRequirement">What do you need help with? *</label>
+                    <textarea id="consRequirement" name="requirement" required placeholder="Describe your legal or G2C requirement..."></textarea>
                 </div>
                 <button type="submit" class="btn-primary">Request Free Consultation</button>
                 <p class="form-note">We'll respond within 2 hours on business days</p>
@@ -87,10 +242,10 @@
                     For anything complex or urgent, connect instantly below.
                 </p>
                 <div class="hero-ctas">
-                    <button class="btn-primary" onclick="document.getElementById('consultationModal').style.display='flex'">
+                    <button class="btn-primary" onclick="openConsultationModal()">
                         💬 Chat on WhatsApp
                     </button>
-                    <button class="btn-secondary" onclick="document.getElementById('consultationModal').style.display='flex'">
+                    <button class="btn-secondary" onclick="openConsultationModal()">
                         📞 Book Consultation
                     </button>
                 </div>
@@ -120,7 +275,7 @@
                         <li>Compliance Assistance</li>
                         <li>Notary & Attestation Support</li>
                     </ul>
-                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                    <button class="btn-outline" onclick="openConsultationModal()">Get Help</button>
                 </div>
 
                 <!-- Property & Registration -->
@@ -134,7 +289,7 @@
                         <li>Stamp Duty & Online Registration</li>
                         <li>Mutation & Property Correction</li>
                     </ul>
-                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                    <button class="btn-outline" onclick="openConsultationModal()">Get Help</button>
                 </div>
 
                 <!-- Investigation & Tracing -->
@@ -148,7 +303,7 @@
                         <li>Evidence Gathering for Legal Use</li>
                         <li>Missing Persons & Identity Cases</li>
                     </ul>
-                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                    <button class="btn-outline" onclick="openConsultationModal()">Get Help</button>
                 </div>
 
                 <!-- G2C Services -->
@@ -162,7 +317,7 @@
                         <li>Gazette Publications</li>
                         <li>Government Portal Assistance</li>
                     </ul>
-                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                    <button class="btn-outline" onclick="openConsultationModal()">Get Help</button>
                 </div>
 
                 <!-- Family & Personal -->
@@ -176,7 +331,7 @@
                         <li>Name Change & Gazette Services</li>
                         <li>Notary Services</li>
                     </ul>
-                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                    <button class="btn-outline" onclick="openConsultationModal()">Get Help</button>
                 </div>
 
                 <!-- Court & Legal Filing -->
@@ -190,7 +345,7 @@
                         <li>Legal Research & Briefing</li>
                         <li>Client Interview & Intake</li>
                     </ul>
-                    <button class="btn-outline" onclick="document.getElementById('consultationModal').style.display='flex'">Get Help</button>
+                    <button class="btn-outline" onclick="openConsultationModal()">Get Help</button>
                 </div>
             </div>
         </div>
@@ -280,16 +435,27 @@
 
                 <div class="contact-form-wrapper">
                     <h3>Send us a Message</h3>
-                    <form id="contactForm"
-      action="https://script.google.com/macros/s/AKfycbx8WwQ17EEvw6UrZ5s718nUU_dZo5dpQAjFnD1GA_2ZHU0r3MBVLHhqVdbfaZPVQ6bl/exec"
-      method="POST" class="contact-form">
-  <input type="text"   name="name"    placeholder="Full Name" required />
-  <input type="email"  name="email"   placeholder="your@email.com" required />
-  <input type="tel"    name="phone"   placeholder="+91 XXXXX XXXXX" required />
-  <textarea            name="message" placeholder="Tell us what you need..." required></textarea>
-  <!-- Map 'message' to 'requirement' on backend (optional: change name to requirement to match script) -->
-  <button type="submit" class="btn-primary">Send Message</button>
-</form>
+                    <!-- Contact Form: Posts to your Gmail API endpoint -->
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="name" required placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone *</label>
+                            <input type="tel" id="contactPhone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" required placeholder="Tell us what you need..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                        <p class="form-note">We'll get back to you within 2 hours</p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -336,6 +502,152 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- ===== JAVASCRIPT: CORE FUNCTIONALITY ===== -->
+    <script>
+        // Modal Functions
+        const consultationBtn = document.getElementById('consultationBtn');
+        const consultationModal = document.getElementById('consultationModal');
+        const closeModal = document.getElementById('closeModal');
+
+        function openConsultationModal() {
+            consultationModal.style.display = 'flex';
+        }
+
+        consultationBtn.addEventListener('click', openConsultationModal);
+
+        closeModal.addEventListener('click', () => {
+            consultationModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === consultationModal) {
+                consultationModal.style.display = 'none';
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form Submission Handler: Posts to Gmail API
+        // Replace YOUR_GMAIL_API_ENDPOINT with your actual Apps Script endpoint
+        const GMAIL_API_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyI3IERnpeR5RLqjenDOKCq8mh0NMczHx7MGKarbZcGQC8ivrQ6umcJa1lWaXzw7Okg/exec';
+
+        const consultationForm = document.getElementById('consultationForm');
+        const contactForm = document.getElementById('contactForm');
+
+        function submitForm(form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    message: formData.get('requirement') || formData.get('message') || ''
+                };
+
+                try {
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+
+                    const response = await fetch(GMAIL_API_ENDPOINT, {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+
+                    const result = await response.json();
+
+                    if (result.ok) {
+                        showNotification('success', 'Your request has been sent! We\'ll contact you within 2 hours.');
+                        form.reset();
+                        if (form === consultationForm) {
+                            setTimeout(() => {
+                                consultationModal.style.display = 'none';
+                            }, 2000);
+                        }
+                    } else {
+                        showNotification('error', 'Error: ' + (result.error || 'Failed to send'));
+                    }
+
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                } catch (error) {
+                    console.error('Error:', error);
+                    showNotification('error', 'Network error. Please try again.');
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    submitBtn.textContent = submitBtn.getAttribute('data-original-text') || 'Submit';
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+
+        submitForm(consultationForm);
+        submitForm(contactForm);
+
+        // Notification System
+        function showNotification(type, message) {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 5px;
+                color: white;
+                z-index: 10000;
+                animation: slideInRight 0.3s ease-in-out;
+                max-width: 400px;
+                font-weight: 500;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            `;
+
+            if (type === 'success') {
+                notification.style.backgroundColor = '#10b981';
+            } else if (type === 'error') {
+                notification.style.backgroundColor = '#ef4444';
+            }
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 4000);
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

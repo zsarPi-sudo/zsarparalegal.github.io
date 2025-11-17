@@ -18,7 +18,7 @@ Disallow: /.github/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://yourusername.github.io/zsarparalegal/sitemap.xml
+Sitemap: https://zsarpi-sudo.github.io/zsarparalegal.github.io/sitemap.xml
 
 # Specific search engine rules
 User-agent: Googlebot

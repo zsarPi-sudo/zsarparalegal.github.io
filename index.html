@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p/6mZz1Y4QdQx4Xw3Jm7G9jzUQmZr9sR8yF4Q9p+V5eF3q9J6g5b6m6dF0N1e2y3" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tippy (tooltips) -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
     <meta name="description" content="Professional paralegal, G2C, and private investigation services in Mumbai. Expert guidance on legal documentation, property registration, passport services, and government procedures. Pan-India service delivery. Free consultation available.">
     <meta name="keywords" content="paralegal services, G2C services, legal documentation, property registration, passport services, investigation services, Mumbai, India">
     <meta name="author" content="ZSAR's Paralegal & G2C">
@@ -12,7 +17,13 @@
     <meta property="og:title" content="ZSAR's Paralegal & G2C Services - Expert Legal Documentation & Government Services">
     <meta property="og:description" content="Professional paralegal, G2C, and investigation services. Expert guidance on legal matters, property, and government procedures. Free consultation.">
     <meta property="og:type" content="website">
-    
+            <!-- Mobile toggle -->
+            <button id="mobileMenuToggle" aria-expanded="false" aria-controls="navMenu" class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span class="bar bar-top"></span>
+                <span class="bar bar-mid"></span>
+                <span class="bar bar-btm"></span>
+            </button>
+            <ul id="navMenu" class="nav-links">
     <!-- Canonical URL -->
     <link rel="canonical" href="https://zsarpi-sudo.github.io/zsarparalegal.github.io/">
     
@@ -932,6 +943,11 @@
         </div>
     </footer>
 
+    <!-- Scroll to top -->
+    <button class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- JavaScript -->
     <script>
         // Modal Functions
@@ -994,6 +1010,41 @@
                 }
             });
         });
+
+        /* ===== Additional UI initializations ===== */
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', () => {
+                const open = mobileToggle.classList.toggle('active');
+                mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Scroll to top button
+        const scrollBtn = document.querySelector('.scroll-to-top');
+        const showOn = 300;
+        function checkScroll() {
+            if (!scrollBtn) return;
+            if (window.scrollY > showOn) scrollBtn.classList.add('visible'); else scrollBtn.classList.remove('visible');
+        }
+        window.addEventListener('scroll', checkScroll, { passive: true });
+        if (scrollBtn) {
+            scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+
+        // Initialize Tippy tooltips if available
+        (function initTippy(){
+            if (window.tippy) {
+                tippy('[data-tippy-content]', {delay: [60, 0], animation: 'shift-away', theme: 'light'});
+            }
+        })();
     </script>
+
+    <!-- External libs (Popper required by Tippy) -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
 </body>
 </html>

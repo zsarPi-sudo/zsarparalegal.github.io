@@ -39,6 +39,24 @@ nav{background:var(--bg);position:sticky;top:0;z-index:40;border-bottom:1px soli
 .nav-links a{color:var(--text);text-decoration:none;font-weight:500;transition:color .18s}
 .nav-links a:hover{color:var(--primary)}
 
+/* Mobile toggle (hamburger) */
+.mobile-menu-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;background:transparent;border:none;cursor:pointer}
+.mobile-menu-toggle .bar{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:transform .18s,opacity .18s}
+.mobile-menu-toggle .bar + .bar{margin-top:5px}
+
+/* Show hamburger on small screens */
+@media (max-width:600px){
+  .mobile-menu-toggle{display:flex}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem;border-top:1px solid var(--border);box-shadow:var(--shadow-sm)}
+  .nav-links.active{display:flex}
+  .nav-links li{padding:.6rem 1rem}
+}
+
+/* Active hamburger animation */
+.mobile-menu-toggle.active .bar-top{transform:translateY(6px) rotate(45deg)}
+.mobile-menu-toggle.active .bar-mid{opacity:0}
+.mobile-menu-toggle.active .bar-btm{transform:translateY(-6px) rotate(-45deg)}
+
 /* HERO */
 .hero{background:linear-gradient(135deg,var(--primary),var(--primary-600));color:#fff;padding:4.5rem 1.5rem;text-align:center}
 .hero h2{font-size:2.25rem;margin-bottom:.5rem}
@@ -98,6 +116,13 @@ h2.section-title{font-size:1.75rem;color:var(--primary);text-align:center;margin
 
 /* Floating CTA */
 .floating-cta{position:fixed;right:1.25rem;bottom:1.25rem;width:56px;height:56px;border-radius:9999px;background:var(--success);color:#fff;border:none;display:grid;place-items:center;font-size:1.25rem;box-shadow:var(--shadow-md);z-index:1000}
+
+/* Scroll-to-top button */
+.scroll-to-top{position:fixed;right:1.25rem;bottom:5.5rem;width:44px;height:44px;border-radius:8px;background:rgba(15,23,42,0.06);color:var(--text);display:grid;place-items:center;border:none;cursor:pointer;opacity:0;transform:translateY(6px);transition:opacity .18s,transform .18s;z-index:1000}
+.scroll-to-top.visible{opacity:1;transform:none;background:var(--primary);color:#fff;box-shadow:var(--shadow-sm)}
+
+/* Tippy (tooltip) theme tweaks */
+.tippy-box[data-theme~='light']{background:#fff;color:var(--text);box-shadow:var(--shadow-sm);border-radius:8px}
 
 /* Footer */
 footer{background:#0f1724;color:#fff;padding:2rem 1rem}

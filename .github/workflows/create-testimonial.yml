@@ -11,7 +11,7 @@ jobs:
       - name: Create Testimonial Issue
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.WEB3FORM }}
           script: |
             const { name, service, rating, feedback } = context.payload.client_payload;
             
